@@ -1,0 +1,309 @@
+{
+	"shelters": [{
+		"name": "要小学校",
+		"address": "要町2-3-20",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "高松小学校",
+		"address": "高松2-57-22",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "千川中学校",
+		"address": "高松1-9-21",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "仰高小学校",
+		"address": "駒込5-1-19",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "駒込小学校",
+		"address": "駒込3-13-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "駒込中学校",
+		"address": "駒込4-5-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "旧文成小学校",
+		"address": "池袋本町4-36-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "池袋本町小学校,池袋中学校",
+		"address": "池袋本町1-43-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "巣鴨小学校",
+		"address": "南大塚1-24-10",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "西巣鴨中学校",
+		"address": "南大塚3-18-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "清和小学校",
+		"address": "巣鴨3-14-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "西巣鴨小学校",
+		"address": "西巣鴨1-27-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "朝日小学校",
+		"address": "巣鴨5-33-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "巣鴨北中学校",
+		"address": "西巣鴨3-17-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "豊成小学校",
+		"address": "上池袋1-18-24",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "朋有小学校",
+		"address": "東池袋4-40-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "池袋第一小学校",
+		"address": "上池袋4-28-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "みらい館大明",
+		"address": "池袋3-30-8",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "池袋小学校",
+		"address": "池袋4-23-8",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "西池袋中学校",
+		"address": "西池袋4-7-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "池袋第三小学校",
+		"address": "西池袋3-14-3",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "南池袋小学校",
+		"address": "南池袋3-18-12",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "高南小学校",
+		"address": "高田2-12-7",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "千登世橋中学校",
+		"address": "目白1-1-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "長崎小学校",
+		"address": "長崎2-6-3",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "富士見台小学校",
+		"address": "南長崎1-10-5",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "旧真和中学校",
+		"address": "目白5-24-12",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "椎名町小学校",
+		"address": "南長崎4-30-5",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "南長崎スポーツ公園",
+		"address": "南長崎4-13-5",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "千早小学校",
+		"address": "千早3-33-5",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "豊島体育館",
+		"address": "要町3-47-8",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "さくら小学校",
+		"address": "長崎6-16-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "明豊中学校",
+		"address": "長崎5-31-29",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}, {
+		"name": "西部区民事務所",
+		"address": "千早2-39-16",
+		"call_number": "",
+		"coordinate": {
+			"lat": null,
+			"lng": null
+		},
+		"related_page": ""
+	}]
+}

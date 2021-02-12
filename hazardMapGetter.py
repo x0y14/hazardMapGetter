@@ -140,3 +140,55 @@ class HazardMapGetter:
             )
 
         return shelters_info
+
+    # 豊島区(http://www.city.toshima.lg.jp/042/bosai/taisaku/yobo/kokorogamae/007197.html)
+    # pdf(http://www.city.toshima.lg.jp/042/bosai/taisaku/yobo/kokorogamae/documents/oomotemenn.pdf)
+    # から手動で抜き出した。
+    def get_toshima_shelters_json(self):
+        toshima_template = self.gen_shelters_json_template(
+        items=[
+                ("name", "str"),
+                ("address", "str"),
+                ("call_number", "str"),
+                ("coordinate", "coordinate"),
+                ("related_page", "str"),
+            ], duplicate=34
+        )
+        return toshima_template
+
+    # 豊島区みたいに要素が少ないもの、あまり親切に作られていないもの、から情報を手動で抜き出す時用の手助け関数。
+    @staticmethod
+    def gen_shelters_json_template(items: list[(str, str)], duplicate: int):
+        # gen
+        # item format (item_name: str, type: str)
+        # place_holder: {str: "", int: 0, list: [], coordinate: {"lat": (None)null, "lng": (None)null}}
+        shelters_info = {
+            "shelters": []
+        }
+
+        shelter = {}
+        for i in items:
+            # itemのタイプが不明でないもののみ取り扱いたい。。
+            if i[1] not in ['int', 'str', 'list', 'coordinate']:
+                raise Exception("Item type must be in ['int', 'str', 'list', 'coordinate'].")
+
+            # 重複を禁止したい。
+            if shelter.get(i[0]):
+                raise Exception("Duplicates are prohibited.")
+
+            # 各々。
+            if i[1] == "str":
+                shelter[i[0]] = ""
+            elif i[1] == "int":
+                shelter[i[0]] = 0
+            elif i[1] == "list":
+                shelter[i[0]] = []
+            elif i[1] == "coordinate":
+                shelter[i[0]] = {"lat": None, "lng": None}
+            else:
+                raise Exception("unknown type")
+
+        for d in range(duplicate):
+            shelters_info["shelters"].append(shelter)
+
+        return shelters_info
