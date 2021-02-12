@@ -1,0 +1,525 @@
+{
+	"shelters": [{
+		"name": "赤羽小学校",
+		"address": "赤羽1-24-6",
+		"call_number": "03-3901-8510",
+		"coordinate": {
+			"lat": "35.7806475102",
+			"lng": "139.721544131"
+		},
+		"related_page": ""
+	}, {
+		"name": "西が丘小学校",
+		"address": "十条仲原4-5-17",
+		"call_number": "03-3900-8866",
+		"coordinate": {
+			"lat": "35.7699183746",
+			"lng": "139.721294622"
+		},
+		"related_page": ""
+	}, {
+		"name": "としま若葉小学校",
+		"address": "豊島5-3-30",
+		"call_number": "03-3912-1458",
+		"coordinate": {
+			"lat": "35.766130756",
+			"lng": "139.750178484"
+		},
+		"related_page": ""
+	}, {
+		"name": "十条台小学校",
+		"address": "中十条1-5-6",
+		"call_number": "03-3908-3300",
+		"coordinate": {
+			"lat": "35.7586649505",
+			"lng": "139.73054084"
+		},
+		"related_page": ""
+	}, {
+		"name": "東十条小学校",
+		"address": "東十条3-14-23",
+		"call_number": "03-3913-6648",
+		"coordinate": {
+			"lat": "35.7660467484",
+			"lng": "139.729009651"
+		},
+		"related_page": ""
+	}, {
+		"name": "柳田小学校",
+		"address": "豊島2-11-20",
+		"call_number": "03-3911-5409",
+		"coordinate": {
+			"lat": "35.7576481114",
+			"lng": "139.743962216"
+		},
+		"related_page": ""
+	}, {
+		"name": "堀船小学校",
+		"address": "堀船2-11-9",
+		"call_number": "03-3912-2868",
+		"coordinate": {
+			"lat": "35.7538321851",
+			"lng": "139.746425067"
+		},
+		"related_page": ""
+	}, {
+		"name": "豊川小学校",
+		"address": "豊島3-10-23",
+		"call_number": "03-3913-4111",
+		"coordinate": {
+			"lat": "35.7609590228",
+			"lng": "139.74278228"
+		},
+		"related_page": ""
+	}, {
+		"name": "荒川小学校",
+		"address": "中十条3-1-6",
+		"call_number": "03-3908-3949",
+		"coordinate": {
+			"lat": "35.7633925789",
+			"lng": "139.725663543"
+		},
+		"related_page": ""
+	}, {
+		"name": "王子第五小学校",
+		"address": "上十条2-18-17",
+		"call_number": "03-3907-2381",
+		"coordinate": {
+			"lat": "35.7595056693",
+			"lng": "139.719244833"
+		},
+		"related_page": ""
+	}, {
+		"name": "王子第三小学校",
+		"address": "上十条5-2-3",
+		"call_number": "03-3907-2355",
+		"coordinate": {
+			"lat": "35.7654654206",
+			"lng": "139.71794509"
+		},
+		"related_page": ""
+	}, {
+		"name": "王子第二小学校",
+		"address": "王子本町2-2-5",
+		"call_number": "03-3908-2460",
+		"coordinate": {
+			"lat": "35.7562790682",
+			"lng": "139.732688556"
+		},
+		"related_page": ""
+	}, {
+		"name": "王子第一小学校",
+		"address": "王子5-14-18",
+		"call_number": "03-3919-9174",
+		"coordinate": {
+			"lat": "35.765175",
+			"lng": "139.737516"
+		},
+		"related_page": ""
+	}, {
+		"name": "旧桜田小学校",
+		"address": "王子5-2-8",
+		"call_number": "",
+		"coordinate": {
+			"lat": "35.7626249156",
+			"lng": "139.734909218"
+		},
+		"related_page": ""
+	}, {
+		"name": "田端小学校",
+		"address": "田端5-4-1",
+		"call_number": "03-3823-0014",
+		"coordinate": {
+			"lat": "35.737211597",
+			"lng": "139.756870466"
+		},
+		"related_page": "関連ページ\n"
+	}, {
+		"name": "北区役所滝野川分庁舎",
+		"address": "滝野川2-52-10",
+		"call_number": "",
+		"coordinate": {
+			"lat": "35.7512862343",
+			"lng": "139.733232205"
+		},
+		"related_page": ""
+	}, {
+		"name": "滝野川第三小学校",
+		"address": "滝野川1-12-27",
+		"call_number": "03-3910-2502",
+		"coordinate": {
+			"lat": "35.7484395135",
+			"lng": "139.736657728"
+		},
+		"related_page": ""
+	}, {
+		"name": "梅木小学校",
+		"address": "西が丘2-21-15",
+		"call_number": "03-3900-3393",
+		"coordinate": {
+			"lat": "35.7678867898",
+			"lng": "139.713887827"
+		},
+		"related_page": ""
+	}, {
+		"name": "赤羽岩淵中学校",
+		"address": "赤羽2-6-18",
+		"call_number": "",
+		"coordinate": {
+			"lat": "35.7794113288",
+			"lng": "139.726107376"
+		},
+		"related_page": ""
+	}, {
+		"name": "十条富士見中学校",
+		"address": "十条台1-9-33",
+		"call_number": "",
+		"coordinate": {
+			"lat": "35.7575368936",
+			"lng": "139.723085398"
+		},
+		"related_page": ""
+	}, {
+		"name": "神谷小学校",
+		"address": "神谷2-30-5",
+		"call_number": "03-3901-2724",
+		"coordinate": {
+			"lat": "35.7721048015",
+			"lng": "139.729256375"
+		},
+		"related_page": ""
+	}, {
+		"name": "第四岩淵小学校",
+		"address": "赤羽3-24-23",
+		"call_number": "03-3901-2501",
+		"coordinate": {
+			"lat": "35.7860293029",
+			"lng": "139.720659006"
+		},
+		"related_page": ""
+	}, {
+		"name": "なでしこ小学校",
+		"address": "志茂1-34-17",
+		"call_number": "03-3901-2601",
+		"coordinate": {
+			"lat": "35.7770810",
+			"lng": "139.732015"
+		},
+		"related_page": ""
+	}, {
+		"name": "岩淵小学校",
+		"address": "岩淵町6-6",
+		"call_number": "03-3901-2969",
+		"coordinate": {
+			"lat": "35.7845572969",
+			"lng": "139.72600738"
+		},
+		"related_page": ""
+	}, {
+		"name": "旧富士見中学校",
+		"address": "上十条3-1-25",
+		"call_number": "03-3908-5648",
+		"coordinate": {
+			"lat": "35.7594338237",
+			"lng": "139.71714741"
+		},
+		"related_page": ""
+	}, {
+		"name": "ココキタ豊島北コミュニティアリーナ",
+		"address": "豊島5-3-13",
+		"call_number": "03-3913-8363",
+		"coordinate": {
+			"lat": "35.764893",
+			"lng": "139.750020"
+		},
+		"related_page": ""
+	}, {
+		"name": "新町コミュニティアリーナ",
+		"address": "田端新町2-27-17",
+		"call_number": "",
+		"coordinate": {
+			"lat": "35.740221",
+			"lng": "139.768061"
+		},
+		"related_page": ""
+	}, {
+		"name": "旧清至中学校",
+		"address": "王子6-7-3",
+		"call_number": "",
+		"coordinate": {
+			"lat": "35.7629088609",
+			"lng": "139.741303726"
+		},
+		"related_page": ""
+	}, {
+		"name": "飛鳥中学校",
+		"address": "西ヶ原3-5-12",
+		"call_number": "03-3910-6175",
+		"coordinate": {
+			"lat": "35.7441634071",
+			"lng": "139.742600002"
+		},
+		"related_page": ""
+	}, {
+		"name": "田端中学校",
+		"address": "田端4-17-1",
+		"call_number": "03-5814-7151",
+		"coordinate": {
+			"lat": "35.738514",
+			"lng": "139.753902"
+		},
+		"related_page": ""
+	}, {
+		"name": "浮間中学校",
+		"address": "浮間4-29-32",
+		"call_number": "03-3967-0226",
+		"coordinate": {
+			"lat": "35.7903521167",
+			"lng": "139.693095071"
+		},
+		"related_page": ""
+	}, {
+		"name": "神谷中学校",
+		"address": "神谷2-46-13",
+		"call_number": "03-3902-2461",
+		"coordinate": {
+			"lat": "35.7736395032",
+			"lng": "139.729412103"
+		},
+		"related_page": ""
+	}, {
+		"name": "桐ケ丘中学校",
+		"address": "桐ケ丘2-6-11",
+		"call_number": "03-5963-3811",
+		"coordinate": {
+			"lat": "35.780181597",
+			"lng": "139.708595044"
+		},
+		"related_page": ""
+	}, {
+		"name": "稲付中学校",
+		"address": "赤羽西6-1-4",
+		"call_number": "03-3900-6211",
+		"coordinate": {
+			"lat": "35.7704776",
+			"lng": "139.708020"
+		},
+		"related_page": ""
+	}, {
+		"name": "堀船中学校",
+		"address": "堀船2-23-20",
+		"call_number": "03-3911-8817",
+		"coordinate": {
+			"lat": "35.7555601121",
+			"lng": "139.746849054"
+		},
+		"related_page": ""
+	}, {
+		"name": "明桜中学校",
+		"address": "王子6-3-23",
+		"call_number": "03-3912-1838",
+		"coordinate": {
+			"lat": "35.7598749069",
+			"lng": "139.741558336"
+		},
+		"related_page": ""
+	}, {
+		"name": "王子桜中学校",
+		"address": "王子2-7-1",
+		"call_number": "03-5902-3155",
+		"coordinate": {
+			"lat": "35.7586597665",
+			"lng": "139.735103361"
+		},
+		"related_page": ""
+	}, {
+		"name": "旧西浮間小学校",
+		"address": "浮間4-29-30",
+		"call_number": "",
+		"coordinate": {
+			"lat": "35.7904363",
+			"lng": "139.691532"
+		},
+		"related_page": ""
+	}, {
+		"name": "志茂子ども交流館",
+		"address": "志茂5-18-3",
+		"call_number": "03-3902-4646",
+		"coordinate": {
+			"lat": "35.7837720833",
+			"lng": "139.731553826"
+		},
+		"related_page": ""
+	}, {
+		"name": "滝野川もみじ小学校",
+		"address": "滝野川3-72-1",
+		"call_number": "03-3949-5267",
+		"coordinate": {
+			"lat": "35.7509667638",
+			"lng": "139.728456719"
+		},
+		"related_page": ""
+	}, {
+		"name": "谷端小学校",
+		"address": "滝野川7-12-17",
+		"call_number": "03-3916-1155",
+		"coordinate": {
+			"lat": "35.7447684157",
+			"lng": "139.721585354"
+		},
+		"related_page": ""
+	}, {
+		"name": "西ケ原小学校",
+		"address": "西ケ原4-19-21",
+		"call_number": "03-3910-5204",
+		"coordinate": {
+			"lat": "35.7431938169",
+			"lng": "139.736911521"
+		},
+		"related_page": ""
+	}, {
+		"name": "滝野川第五小学校",
+		"address": "昭和町3-3-12",
+		"call_number": "03-3893-1200",
+		"coordinate": {
+			"lat": "35.749564758",
+			"lng": "139.749601204"
+		},
+		"related_page": ""
+	}, {
+		"name": "滝野川第四小学校",
+		"address": "東田端2-5-23",
+		"call_number": "03-3893-0041",
+		"coordinate": {
+			"lat": "35.7402950347",
+			"lng": "139.762320482"
+		},
+		"related_page": ""
+	}, {
+		"name": "滝野川第二小学校",
+		"address": "滝野川6-19-4",
+		"call_number": "03-3916-3278",
+		"coordinate": {
+			"lat": "35.7448480068",
+			"lng": "139.726349646"
+		},
+		"related_page": ""
+	}, {
+		"name": "滝野川小学校",
+		"address": "西ヶ原1-18-10",
+		"call_number": "03-3910-3703",
+		"coordinate": {
+			"lat": "35.7424994729",
+			"lng": "139.748073633"
+		},
+		"related_page": ""
+	}, {
+		"name": "赤羽台西小学校",
+		"address": "赤羽台2-1-34",
+		"call_number": "03-3907-2475",
+		"coordinate": {
+			"lat": "35.7751742524",
+			"lng": "139.713617874"
+		},
+		"related_page": ""
+	}, {
+		"name": "西浮間小学校",
+		"address": "浮間2-7-1",
+		"call_number": "03-5915-0133",
+		"coordinate": {
+			"lat": "35.7926503882",
+			"lng": "139.699207771"
+		},
+		"related_page": "関連ページ\n"
+	}, {
+		"name": "浮間小学校",
+		"address": "浮間3-4-27",
+		"call_number": "03-3969-0491",
+		"coordinate": {
+			"lat": "35.7858416507",
+			"lng": "139.700528812"
+		},
+		"related_page": ""
+	}, {
+		"name": "八幡小学校",
+		"address": "赤羽台3-18-5",
+		"call_number": "03-3900-8855",
+		"coordinate": {
+			"lat": "35.7808970532",
+			"lng": "139.714291644"
+		},
+		"related_page": ""
+	}, {
+		"name": "袋小学校",
+		"address": "赤羽北2-15-3",
+		"call_number": "03-3907-7483",
+		"coordinate": {
+			"lat": "35.7840394806",
+			"lng": "139.705759061"
+		},
+		"related_page": ""
+	}, {
+		"name": "桐ケ丘郷小学校",
+		"address": "桐ケ丘1-10-23",
+		"call_number": "03-3907-0878",
+		"coordinate": {
+			"lat": "35.7768329415",
+			"lng": "139.707163158"
+		},
+		"related_page": ""
+	}, {
+		"name": "稲田小学校",
+		"address": "赤羽南2-23-24",
+		"call_number": "03-3902-2944",
+		"coordinate": {
+			"lat": "35.773232453",
+			"lng": "139.725361554"
+		},
+		"related_page": ""
+	}, {
+		"name": "滝野川紅葉中学校",
+		"address": "滝野川5-55-8",
+		"call_number": "",
+		"coordinate": {
+			"lat": "35.7500000927",
+			"lng": "139.724833963"
+		},
+		"related_page": ""
+	}, {
+		"name": "王子小学校",
+		"address": "王子2-7-1",
+		"call_number": "03-5902-3358",
+		"coordinate": {
+			"lat": "35.7575939062",
+			"lng": "139.735964226"
+		},
+		"related_page": ""
+	}, {
+		"name": "旧赤羽台東小学校",
+		"address": "赤羽台1-1-13",
+		"call_number": "",
+		"coordinate": {
+			"lat": "35.780212",
+			"lng": "139.717681"
+		},
+		"related_page": ""
+	}, {
+		"name": "旧滝野川第六小学校",
+		"address": "滝野川5-44-15",
+		"call_number": "",
+		"coordinate": {
+			"lat": "35.748758",
+			"lng": "139.724242"
+		},
+		"related_page": ""
+	}, {
+		"name": "旧田端中学校",
+		"address": "田端6-9-1",
+		"call_number": "",
+		"coordinate": {
+			"lat": "35.741392",
+			"lng": "139.755483"
+		},
+		"related_page": ""
+	}]
+}
