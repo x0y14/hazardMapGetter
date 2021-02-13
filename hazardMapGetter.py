@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import json
+import re
 
 
 class Shelter:
@@ -78,7 +79,7 @@ class HazardMapGetter:
             coordinate["lat"] = c[0]
             coordinate["lng"] = c[1]
 
-            print(f"{name}({address}) ['tell'='{call_number}', 'geo'=({coordinate['lat']}, {coordinate['lng']})]")
+            # print(f"{name}({address}) ['tell'='{call_number}', 'geo'=({coordinate['lat']}, {coordinate['lng']})]")
 
             # shelter = Shelter(
             #     name=name,
@@ -92,8 +93,9 @@ class HazardMapGetter:
                 "name": name,
                 "address": address,
                 "call_number": call_number,
+                "capacity": 0,
                 "coordinate": coordinate,
-                "related_page": related_page
+                "related_page": related_page,
             }
             shelters_info["shelters"].append(shelter)
 
@@ -124,18 +126,37 @@ class HazardMapGetter:
         shpo.extend(ho.json()["features"])
 
         for shltr in shpo:
+
+            if shltr["properties"]["電話"] is None:
+                call_number = ""
+            elif "-" in shltr["properties"]["電話"]:
+                call_number = shltr["properties"]["電話"]
+            else:
+                call_number_regex = re.match(r"\(([0-9]*)\)([0-9]*)", str(shltr["properties"]["電話"]))
+                call_number = f"03-{call_number_regex.group(1)}-{call_number_regex.group(2)}"
+
+
+            if shltr["properties"]["収容可能"] is None:
+                capa = 0
+            else:
+                capa = shltr["properties"]["収容可能"]
+                if "，" in capa:
+                    capa = capa.replace('，', "")
+                capa = int(capa)
+
             shelters_info["shelters"].append(
                 {
-                    "category": "hinanjo",
-                    "area": shltr["properties"]["地域センタ"],
+                    # "category": "hinanjo",
+                    # "area": shltr["properties"]["地域センタ"],
                     "name": shltr["properties"]["施設名"],
                     "address": shltr["properties"]["所在地"],
-                    "call_number": shltr["properties"]["電話"],
-                    "capacity": shltr["properties"]["収容可能"],
+                    "call_number": call_number,
+                    "capacity": capa,
                     "coordinate": {
                         "lat": shltr["geometry"]["coordinates"][1],
                         "lng": shltr["geometry"]["coordinates"][0],
-                    }
+                    },
+                    "related_page": ""
                 }
             )
 
@@ -150,6 +171,7 @@ class HazardMapGetter:
                 ("name", "str"),
                 ("address", "str"),
                 ("call_number", "str"),
+                ("capacity", "int"),
                 ("coordinate", "coordinate"),
                 ("related_page", "str"),
             ], duplicate=34
@@ -239,7 +261,11 @@ class HazardMapGetter:
                     "name": shelter_name,
                     "address": shelter_address,
                     "call_number": "",
-                    "coordinate": "",
+                    "capacity": 0,
+                    "coordinate": {
+                        "lat": None,
+                        "lng": None,
+                    },
                     "related_page": "",
                 }
             )
