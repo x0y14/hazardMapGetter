@@ -146,7 +146,7 @@ class HazardMapGetter:
     # から手動で抜き出した。
     def get_toshima_shelters_json(self):
         toshima_template = self.gen_shelters_json_template(
-        items=[
+            items=[
                 ("name", "str"),
                 ("address", "str"),
                 ("call_number", "str"),
@@ -192,3 +192,58 @@ class HazardMapGetter:
             shelters_info["shelters"].append(shelter)
 
         return shelters_info
+
+    # 練馬区(https://www.city.nerima.tokyo.jp/kurashi/bosai/jishinokitara/hinanjo/hinanjyoitiran.html)
+    @staticmethod
+    def get_nerima_shelters_json():
+
+        shelters_info = {
+            "shelters": []
+        }
+
+        header = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15"}
+        res = requests.get("https://www.city.nerima.tokyo.jp/kurashi/bosai/jishinokitara/hinanjo/hinanjyoitiran.html", headers=header)
+        if res.status_code != 200:
+            raise Exception("error")
+        page = BeautifulSoup(res.content, "html.parser")
+
+        # program
+
+        # 避難拠点のみ。
+        for tr in page.find_all("tr"):
+            # shelter_number.textするとエラー出る。
+            # いらない情報なので直さない。
+            shelter_number = tr.find("td", class_="center")
+            if (shelter_number is None) or (not shelter_number.text.isdigit()):
+                continue
+
+            # print(tr.find_all("td", class_="center")[0].text)
+
+            shelter_name = tr.find("a", class_="externalLink").text
+
+            # shelterの住所の書き方バラバラなのでたくさん試す。
+            # 滅びろ練馬区。
+            for td in tr.find_all("td"):
+                if "号" in td.text:
+                    shelter_address = td.text
+
+            # print(f"{shelter_name}: {shelter_address}")
+            # ("name", "str"),
+            # ("address", "str"),
+            # ("call_number", "str"),
+            # ("coordinate", "coordinate"),
+            # ("related_page", "str"),
+
+            shelters_info["shelters"].append(
+                {
+                    "name": shelter_name,
+                    "address": shelter_address,
+                    "call_number": "",
+                    "coordinate": "",
+                    "related_page": "",
+                }
+            )
+        return shelters_info
+
+
+
