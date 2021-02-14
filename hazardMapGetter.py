@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import re
+import urllib.parse
 
 from keys import secret_key
 
@@ -263,8 +264,81 @@ class HazardMapGetter:
             )
         return shelters_info
 
-    def secret_test(self):
-        print(secret_key.GOOGLE_MAP_API_KEY)
+    @staticmethod
+    def get_coordinate_from_address(address: str) -> dict:
+        param = f"address={urllib.parse.quote(address)}"
+        uri = f"https://maps.googleapis.com/maps/api/geocode/json?{param}&key={secret_key.GOOGLE_MAP_API_KEY}&language=ja"
+        res = requests.get(uri)
+        print(res.json())
+        if res.json()["results"][0].get("plus_code") == None:
+            plus_code = {}
+        else:
+            plus_code = res.json()["results"][0]["plus_code"]
 
+        return {
+            "coordinate":
+                {
+                    "lng": res.json()["results"][0]["geometry"]["location"]["lng"],
+                    "lat": res.json()["results"][0]["geometry"]["location"]["lat"]
+                },
+            "formatted_address": res.json()["results"][0]["formatted_address"],
+            "place_id": res.json()["results"][0]["place_id"],
+            "plus_code": plus_code,
+        }
+
+    @staticmethod
+    def load_json(city_name: str) -> dict:
+        with open(f"shelters/{city_name}.json", "r") as f:
+            shelters_info = json.load(f)
+        return shelters_info
+
+    def change_shelters_info_formatting(self, city_name: str, kanji: str):
+        extended_shelters_info = {
+            "shelters": []
+        }
+        shelters_info = self.load_json(city_name)
+        for shelter in shelters_info["shelters"]:
+            geo = self.get_coordinate_from_address(f"{kanji}{shelter['address']}")
+
+            if shelter["capacity"] == 0:
+                capacity = None
+            else:
+                capacity = shelter["capacity"]
+
+            extended_shelters_info["shelters"].append(
+                {
+                    "name": shelter["name"],
+                    "address": shelter["address"],
+                    "call_number": shelter["call_number"],
+                    "capacity": capacity,
+                    "geo": geo,
+                    "related_page": shelter["related_page"]
+                }
+            )
+
+        self.dump_json(f"{city_name}_extended.json", extended_shelters_info)
+
+
+    # def formatting(self):
+    #
+    #     test = {
+    #         "name": "区民・産業プラザ",
+    #         "address": "練馬1丁目17番1号",
+    #         "call_number": "03-3992-5335",
+    #         "capacity": None,
+    #         "geo": {
+    #             "coordinate": {
+    #                 "lat": 35.7382309,
+    #                 "lang": 0139.6547069802915
+    #             },
+    #             "formatting_address": "日本、〒176-0001 東京都練馬区練馬１丁目１７−１",
+    #             "place_id": "ChIJswfQDAntGGARMKzuRDp7Fo4",
+    #             "plus_code": {
+    #                 "compound_code": "PMQ3+78 日本、東京都練馬区",
+    #                 "global_code": "8Q7XPMQ3+78"
+    #             }
+    #         },
+    #         "related_page": "https://www.nerima-idc.or.jp/plaza/info/information.html"
+    #     }
 
 
