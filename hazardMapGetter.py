@@ -3,22 +3,15 @@ import requests
 import json
 import re
 import urllib.parse
+import pymongo
 
 from keys import secret_key
-
-
-class Shelter:
-    def __init__(self, name: str, address: str, call_number: str, coordinate: dict, related_page: str):
-        self.name = name
-        self.address = address
-        self.call_number = call_number
-        self.coordinate = coordinate
-        self.related_page = related_page
 
 
 class HazardMapGetter:
     def __init__(self):
         self.version = 0.1
+        self.db = pymongo.MongoClient("mongodb://root:example@localhost:27017").hazardMap
 
     @staticmethod
     def dump_json(file_name: str, data: dict):
@@ -88,7 +81,7 @@ class HazardMapGetter:
                 "call_number": call_number,
                 "capacity": 0,
                 "coordinate": coordinate,
-                "related_page": related_page,
+                "related_page": related_page
             }
             shelters_info["shelters"].append(shelter)
 
@@ -269,8 +262,8 @@ class HazardMapGetter:
         param = f"address={urllib.parse.quote(address)}"
         uri = f"https://maps.googleapis.com/maps/api/geocode/json?{param}&key={secret_key.GOOGLE_MAP_API_KEY}&language=ja"
         res = requests.get(uri)
-        print(res.json())
-        if res.json()["results"][0].get("plus_code") == None:
+        # print(res.json())
+        if res.json()["results"][0].get("plus_code") is None:
             plus_code = {}
         else:
             plus_code = res.json()["results"][0]["plus_code"]
@@ -287,8 +280,8 @@ class HazardMapGetter:
         }
 
     @staticmethod
-    def load_json(city_name: str) -> dict:
-        with open(f"shelters/{city_name}.json", "r") as f:
+    def load_json(file_name: str) -> dict:
+        with open(f"shelters/{file_name}.json", "r") as f:
             shelters_info = json.load(f)
         return shelters_info
 
@@ -309,6 +302,7 @@ class HazardMapGetter:
                 {
                     "name": shelter["name"],
                     "address": shelter["address"],
+                    "area": city_name,
                     "call_number": shelter["call_number"],
                     "capacity": capacity,
                     "geo": geo,
@@ -318,27 +312,10 @@ class HazardMapGetter:
 
         self.dump_json(f"{city_name}_extended.json", extended_shelters_info)
 
-
-    # def formatting(self):
-    #
-    #     test = {
-    #         "name": "区民・産業プラザ",
-    #         "address": "練馬1丁目17番1号",
-    #         "call_number": "03-3992-5335",
-    #         "capacity": None,
-    #         "geo": {
-    #             "coordinate": {
-    #                 "lat": 35.7382309,
-    #                 "lang": 0139.6547069802915
-    #             },
-    #             "formatting_address": "日本、〒176-0001 東京都練馬区練馬１丁目１７−１",
-    #             "place_id": "ChIJswfQDAntGGARMKzuRDp7Fo4",
-    #             "plus_code": {
-    #                 "compound_code": "PMQ3+78 日本、東京都練馬区",
-    #                 "global_code": "8Q7XPMQ3+78"
-    #             }
-    #         },
-    #         "related_page": "https://www.nerima-idc.or.jp/plaza/info/information.html"
-    #     }
-
-
+    def insert_shelters_info(self, shelters: list[dict]):
+        max = len(shelters)
+        i = 1
+        for shelter in shelters:
+            object_id = self.db.shelters.insert_one(shelter).inserted_id
+            print(f"{i}/{max} {object_id}")
+            i += 1
