@@ -79,16 +79,6 @@ class HazardMapGetter:
             coordinate["lat"] = c[0]
             coordinate["lng"] = c[1]
 
-            # print(f"{name}({address}) ['tell'='{call_number}', 'geo'=({coordinate['lat']}, {coordinate['lng']})]")
-
-            # shelter = Shelter(
-            #     name=name,
-            #     address=address,
-            #     call_number=call_number,
-            #     coordinate=coordinate,
-            #     related_page=related_page
-            # )
-
             shelter = {
                 "name": name,
                 "address": address,
