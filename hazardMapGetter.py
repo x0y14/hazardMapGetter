@@ -3,6 +3,8 @@ import requests
 import json
 import re
 
+import secret_key
+
 
 class Shelter:
     def __init__(self, name: str, address: str, call_number: str, coordinate: dict, related_page: str):
@@ -260,6 +262,9 @@ class HazardMapGetter:
                 }
             )
         return shelters_info
+
+    def secret_test(self):
+        print(secret_key.GOOGLE_MAP_API_KEY)
 
 
 
